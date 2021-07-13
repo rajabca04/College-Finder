@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CollegeController;
+use Illuminate\Routing\Route as RoutingRoute;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,11 @@ use App\Http\Controllers\CollegeController;
 */
 
 Route::get('/', [CollegeController::class,"index"]);
+Route::post('/insert', [CollegeController::class,"insertCategory"]);
+
+
+
+
+
+
+
