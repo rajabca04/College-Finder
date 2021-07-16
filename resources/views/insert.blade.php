@@ -13,14 +13,14 @@
                 <div class="card">
                     <div class="card-body">
                         @csrf
-                        <form action="{{Route('insertCategory')}}" method="POST">
-
+                        <form action="{{Route('insertCat')}}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label for="">Enter category name:</label>
                                 <input type="text" name="title" class="form-control">
                             </div>
                             <div class="mb-2">
-                                <input type="submit" value="Save" class="btn btn-success w-100">
+                                <input type="submit" class="btn btn-success w-100">
                             </div>
                         </form>
                     </div>

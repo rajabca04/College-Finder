@@ -13,6 +13,11 @@ class CollegeController extends Controller
         $data = Category::all();
         return view("home",["data"=>$data]);
     }
+    public function insert(){
+        $data = Category::all();
+
+        return view("insert",["data"=>$data]);
+    }
 
     public function insertCategory(Request $req){
         $req->validate(['title'=>"required"]);
@@ -34,6 +39,7 @@ class CollegeController extends Controller
             'logo' => 'required',
             'category' => 'required',
         ]);
+
         $logo = $req->file('logo')->getClientOriginalName();
         $path = $req->file('logo')->storeAs("public/",$logo);
 
@@ -60,10 +66,4 @@ class CollegeController extends Controller
             $c->delete();
             return redirect()->back();
     }
-
-
-
-
-
-
 }
